@@ -17,7 +17,10 @@ router.post('/api/notes', async (req, res) => {
         text: req.body.text,
         id: uuidv4(),
     };
-})
+    dataBase.push(newFeed);
+    fs.writeFileSync("db/db.json", JSON.stringify(dataBase));
+    res.json(dataBase);
+});
 
 
 
