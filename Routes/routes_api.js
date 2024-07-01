@@ -11,7 +11,7 @@ router.get('/api/notes', async (req, res) => {
 
 //Defines the POST request to this route, '/api/notes'
 router.post('/api/notes', async (req, res) => {
-    const dataBase = JSON.parse(fs.readFileSync("db/bd.json", "utf-8"));
+    const dataBase = JSON.parse(fs.readFileSync("db/db.json", "utf-8"));
     const newFeed = {
         title: req.body.title,
         text: req.body.text,
