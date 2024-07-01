@@ -22,7 +22,15 @@ router.post('/api/notes', async (req, res) => {
     res.json(dataBase);
 });
 
-
+//Delete request "Bonus"
+router.delete('/api/notes/:id', (req, res) => {
+    let data = fs.readFileSync("db/db.json", "utf-8");
+    const dataJSON = JSON.parse(data);
+    const newNotes = dataJSON.filter((note) => {
+    });
+    fs.writeFileSync("db/db.json", JSON.stringify(newNotes));
+    res.json("Note Deleted");
+});
 
 
 module.exports = router;
