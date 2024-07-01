@@ -1,8 +1,9 @@
 const express = require('express');
 const routes_html = require('./Routes/routes_html');  //Importing the routes files
 const routes_api = require('./Routes/routes_api'); //Importing the routes files
-const app = express();  //Set the port
+
 const PORT = process.env.PORT || 3001;
+const app = express();  //Set the port
 
 //Middleware setup (will always run the code in order, from top to bottom)
 
@@ -15,6 +16,6 @@ app.use(routes_api);
 //Start the server 
 
 app.listen(PORT, () => {
-    console.log('Server is running on port ${PORT}');
+    console.log(`Server is running on http://localhost:${PORT}`);
 
 });
