@@ -27,7 +27,7 @@ router.delete('/api/notes/:id', (req, res) => {
     let data = fs.readFileSync("db/db.json", "utf-8");
     const dataJSON = JSON.parse(data);
     const newNotes = dataJSON.filter((note) => {
-        return note.id !== req.params.id;
+        return note.id !== req.params.id;  //is used to filter out a specific item from a collection based on an ID comparison.
     });
     fs.writeFileSync("db/db.json", JSON.stringify(newNotes));
     res.json("Note Deleted");
