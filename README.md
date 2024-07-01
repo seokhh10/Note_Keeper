@@ -61,5 +61,5 @@ To set up the Note Taker application locally, follow these steps:
 
 
 ## Deployed Application Link:
-[Render Link:](https://note-keeper-ekie.onrender.com)
+[Render Link](https://note-keeper-ekie.onrender.com)
 
